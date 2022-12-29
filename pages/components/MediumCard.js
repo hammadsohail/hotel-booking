@@ -1,5 +1,12 @@
 import React from 'react'
 import  Image  from 'next/image';
+import {
+  MagnifyingGlassIcon,
+  UserCircleIcon,
+  UsersIcon,
+  GlobeAltIcon,
+  Bars3Icon,
+} from "@heroicons/react/24/outline";
 
 const MediumCard = ({img, title}) => {
   return (
