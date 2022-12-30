@@ -44,6 +44,8 @@ const Header = ({placeholder}) => {
         noOfGuests,
       },
     });
+    resetInput();
+
   }
 
   return (
@@ -57,6 +59,7 @@ const Header = ({placeholder}) => {
           layout="fill"
           objectFit="contain"
           objectPosition="left"
+          alt="logo"
         />
       </div>
 
@@ -116,7 +119,7 @@ const Header = ({placeholder}) => {
             >
               Cancel
             </button>
-            <button onClick={search} className="flex-grow text-red-400" type="button">
+            <button onClick={search}  className="flex-grow text-red-400" type="button">
               Search
             </button>
           </div>

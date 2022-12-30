@@ -6,6 +6,7 @@ const LargeCard = ({ img, title, description, buttonText }) => {
     <div className="relative py-16 cursor-pointer">
       <div className="relative h-96 min-w-[300px]">
         <Image
+          alt="largeCard"
           src={img}
           layout="fill"
           objectFit="cover"

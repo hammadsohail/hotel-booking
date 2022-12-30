@@ -14,7 +14,7 @@ const MediumCard = ({img, title}) => {
 
 
     <div className="relative h-80 w-80 mt-5 ">
-        <Image src={img} layout="fill" className="rounded-lg" />
+        <Image alt="mediumCard" src={img} layout="fill" className="rounded-lg" />
     </div>
      <h3 className="text-2xl mt-3">{title}</h3>
 

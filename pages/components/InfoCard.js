@@ -12,7 +12,7 @@ const InfoCard = ({ img, location, title, description, star, price, total}) => {
   return (
     <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-90 hover:shadow-lg transition duration-200 ease-out first:border-t">
         <div className="relative h-80 w-40 md:h-52 md:w-80 flex-shrink-0" >
-            <Image className="mt-1 rounded-lg" src={img} layout="fill"  objectFit="cover"/>
+            <Image alt="infocard" className="mt-1 rounded-lg" src={img} layout="fill"  objectFit="cover" alt="hotels"/>
         </div>
 
         <div className="flex flex-col flex-grow pl-5">
