@@ -32,7 +32,7 @@ const MapGL = ({ searchResults }) => {
     }}
     onViewportChange={(nextViewport) => setViewport(nextViewport)}
        mapStyle="mapbox://styles/muhammadhammad848/clca6kr8600ay14mpj4pa1ozt"
-      mapboxAccessToken={process.env.mapbox_key}
+      mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_PUBLIC_TOKEN}
       // {...viewport}
     >
       {searchResults.map((result) =>(
