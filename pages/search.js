@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import InfoCard from "./components/InfoCard";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import InfoCard from "../components/InfoCard";
 
 import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
-import MapGL from "./components/MapGL";
+import MapGL from "../components/MapGL";
 
 const Search = ({ searchResults }) => {
   const router = useRouter();
