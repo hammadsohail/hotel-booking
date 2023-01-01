@@ -12,6 +12,7 @@ import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/dist/client/router";
 
+
 const Header = ({placeholder}) => {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
@@ -55,11 +56,12 @@ const Header = ({placeholder}) => {
         className="relative flex items-center h-10 cursor-pointer my-auto"
       >
         <Image
-          src="https://links.papareact.com/qd3"
+          src={"/logo.png"}
           layout="fill"
           objectFit="contain"
           objectPosition="left"
           alt="logo"
+          // className="h-12 object-fit-contain layout-fill object-left"
         />
       </div>
 

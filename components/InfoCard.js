@@ -1,5 +1,8 @@
 import React from 'react'
 import  Image  from 'next/image';
+import { client, urlFor } from '../lib/client';
+import { useRouter } from "next/dist/client/router";
+
 import {
     StarIcon
   } from "@heroicons/react/24/solid";
@@ -8,11 +11,13 @@ import {
   } from "@heroicons/react/24/outline";
 
 
-const InfoCard = ({ img, location, title, description, star, price, total}) => {
+const InfoCard = ({ img, location, title, description, star, price, total, slug, address, area}) => {
+  const router = useRouter();
+
   return (
     <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-90 hover:shadow-lg transition duration-200 ease-out first:border-t">
-        <div className="relative h-80 w-40 md:h-52 md:w-80 flex-shrink-0" >
-            <Image alt="infocard" className="mt-1 rounded-lg" src={img} layout="fill"  objectFit="cover" alt="hotels"/>
+        <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0" >
+            <Image  className="mt-1 rounded-lg" src={img} layout="fill"  objectFit="cover" alt="hotels"/>
         </div>
 
         <div className="flex flex-col flex-grow pl-5">
@@ -21,7 +26,18 @@ const InfoCard = ({ img, location, title, description, star, price, total}) => {
                 <HeartIcon className="h-7 cursor-pointer" />
             </div>
 
-            <h4 className="text-xl">{title}</h4>
+            <h4 onClick={() => router.push({ pathname: `/product/${slug.current}`,
+            query: {
+            location: slug.current,
+            title: title,
+            img: img,
+            description: description,
+            address: address,
+            area: area,
+            slug: slug,
+
+
+      },})} className="text-xl">{title}</h4>
 
             <div className="border-b w-10 pt-2" />
 
