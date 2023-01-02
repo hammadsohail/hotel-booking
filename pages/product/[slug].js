@@ -6,7 +6,9 @@ import MapGL from "../../components/MapGL";
 import { client, urlFor } from '../../lib/client';
 
 
-import { ShareIcon, HeartIcon, SparklesIcon } from "@heroicons/react/24/outline";
+import { ShareIcon,  SparklesIcon } from "@heroicons/react/24/outline";
+import {  HeartIcon } from "@heroicons/react/24/solid";
+
 
 const Product = ({searchResults, locations}) => {
   const router = useRouter();
@@ -35,7 +37,7 @@ const Product = ({searchResults, locations}) => {
                  <div className="flex flex-rows space-x-2 justify-items-end">
                    <ShareIcon className="mt-2 h-5 " />
                    <p className="hidden sm:inline-flex mt-1 underline font-semibold">Share</p>
-                   <HeartIcon className="mt-2 h-5" />
+                   <HeartIcon className="mt-2 h-5 text-red-400  hover:text-red-500 hover:animate-bounce " />
                    <p className="hidden sm:inline-flex mt-1 underline font-semibold">Save</p>
                  </div>
             </div>
@@ -84,9 +86,9 @@ const Product = ({searchResults, locations}) => {
 
                <div className="">
                 <div className="items-center flex flex-col gap-4 rounded-lg mt-5 pb-7">
-                  <div className="row-span-3"><img src={searchResults.images[0].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )} className="h-40 rounded-lg"/></div>
-                  <div className="col-span-2 "><img src={searchResults.images[1].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )} className="h-40 rounded"/></div>
-                  <div className="row-span-2 col-span-3"><img src={searchResults.images[2].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )}className="h-40 rounded"/></div>
+                  <div className="row-span-3"><img src={searchResults.images[0].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )} className="h-40 rounded-lg hover:animate-bounce transition transform-duration-100 ease-out hover:h-80"/></div>
+                  <div className="col-span-2 "><img src={searchResults.images[1].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )} className="h-40 rounded hover:animate-bounce transition transform-duration-100 ease-out hover:h-80"/></div>
+                  <div className="row-span-2 col-span-3"><img src={searchResults.images[2].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )}className="h-40 rounded hover:animate-bounce transition transform-duration-100 ease-out hover:h-80"/></div>
                 </div>
                </div>
                <p className=" border-b-2 mb-10"></p>
