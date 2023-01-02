@@ -26,6 +26,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'longdesc',
+        title: 'longdesc',
+        type: 'string',
+      },
+      {
         name: 'projectby',
         title: 'projectby',
         type: 'string',
@@ -73,6 +78,16 @@ export default {
       {
         name: 'img',
         title: 'img',
+        type: 'array',
+        of: [{ type: 'image' }],
+        options: {
+          hotspot: true,
+        }
+      },
+
+      {
+        name: 'images',
+        title: 'images',
         type: 'array',
         of: [{ type: 'image' }],
         options: {

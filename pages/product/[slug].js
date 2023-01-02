@@ -68,7 +68,7 @@ const Product = ({searchResults, locations}) => {
             </div>
             <p className="mb-5 ml-9 text-gray-600">{searchResults.projectby}</p>
             <p className=" border-b-2 "></p>
-            <p className="mt-7 pb-5">Karachi Safari Park was inaugurated in 1970 by Lieutenant General Atiq-ur-Rehman. It was an independent project of the then Karachi Municipal Corporation. The creation of an independent zoo, safari and aquarium department followed in 1995. Karachi Safari Park is now an independent wing of the Community Development Department of City District Government of Karachi (defunct) and has been designated as a 'family park</p>
+            <p className="mt-7 pb-5">{searchResults.longdesc}</p>
           </div>
         </section>
 
@@ -84,9 +84,9 @@ const Product = ({searchResults, locations}) => {
 
                <div className="">
                 <div className="items-center flex flex-col gap-4 rounded-lg mt-5 pb-7">
-                  <div className="row-span-3"><img src="../sf1.jpg" className="h-40 rounded-lg"/></div>
-                  <div className="col-span-2 "><img src="../sf2.jpg" className="h-40 rounded"/></div>
-                  <div className="row-span-2 col-span-3"><img src="../sf3.webp" className="h-40 rounded"/></div>
+                  <div className="row-span-3"><img src={searchResults.images[0].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )} className="h-40 rounded-lg"/></div>
+                  <div className="col-span-2 "><img src={searchResults.images[1].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )} className="h-40 rounded"/></div>
+                  <div className="row-span-2 col-span-3"><img src={searchResults.images[2].asset._ref.replace("image-", "https://cdn.sanity.io/images/5i9l5w2e/production/").replace("-jpg", ".jpg" )}className="h-40 rounded"/></div>
                 </div>
                </div>
                <p className=" border-b-2 mb-10"></p>
